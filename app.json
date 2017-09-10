@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/addaddr/addaddr",
+    "pages/repay/repay",
+    "pages/cart/cart",
+    "pages/cart2/cart2",
+    "pages/products/products",
+    "pages/prodtype/prodType",
+    "pages/searchlist/searchlist",
+    "pages/search/search",
+    "pages/ucenter/ucenter",
+    "pages/prolist/prolist",
+    "pages/typelist/typeList",
+    "pages/agreement/agreement"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF4500",
+    "navigationBarTitleText": "馋猫便利店",
+    "navigationBarTextStyle":"grep"
+  },
+  "tabBar": {  
+   "color": "#929292",  
+   "selectedColor": "#ff0000",  
+   "borderStyle":"white", 
+   "backgroundColor" :"#fff",
+   "list": [{  
+     "selectedIconPath": "images/11.png",  
+     "iconPath": "images/10.png",  
+     "pagePath": "pages/index/index",  
+     "text": "首页"  
+   }, {  
+     "selectedIconPath": "images/21.png",  
+     "iconPath": "images/20.png",  
+     "pagePath": "pages/prodtype/prodType",  
+     "text": "分类"  
+   }
+   , {  
+     "selectedIconPath": "images/41.png",
+     "iconPath": "images/40.png",
+     "pagePath": "pages/cart/cart",  
+     "text": "购物车"  
+   }
+   , {  
+     "selectedIconPath": "images/51.png",
+     "iconPath": "images/50.png",
+     "pagePath": "pages/ucenter/ucenter",  
+     "text": "我的"  
+   }]  
+ }
+}

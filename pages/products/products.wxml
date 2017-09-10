@@ -1,0 +1,84 @@
+<!--图片轮播-->
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="5000" duration="500" class="swiper">
+  <block wx:for="{{proPhoto}}" wx:key="{{index}}" >
+    <swiper-item class="flexbox">
+      <image src="{{item.img}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--商品内容展示-->
+<view class="products">
+     <view class="line box">
+        <view class="name hidecamp">{{goodsDetail.name}}</view>
+     </view>
+     <view class="line2 flexstart">
+        <view class="price">¥<text style="font-size:2.5em;font-weight:bold">{{goodsDetail.price}}</text></view>
+     </view>
+</view>  
+<!--品牌介绍-->
+  <view class="detail">
+    <view class="title">
+     品牌介绍
+    </view>
+    <view class="mes box">
+        <text>{{goodsDetail.desc}}</text>
+    </view>
+    <view style="height:100rpx"></view>
+ 
+<!--服务承诺-->
+    <view class="title">
+     服务承诺
+    </view>
+    <view class="mes box">
+        <view class="item flexbox">
+            <image src="{{img9}}" class="img09" />
+            <view class="text1">自营自采</view>
+            <view class="text2">只有正品</view>
+        </view>
+        <view class="item flexbox">
+            <image src="{{img10}}" class="img09" />
+             <view class="text1">每日直邮</view>
+            <view class="text2">安全快捷</view>
+        </view>
+        <view class="item flexbox">
+            <image src="{{img11}}" class="img09" />
+             <view class="text1">产品</view>
+            <view class="text2">质量保障</view>
+        </view>
+        <view class="item flexbox">
+            <image src="{{img12}}" class="img09" />
+             <view class="text1">正品同价</view>
+            <view class="text2">拒绝猫腻</view>
+        </view>
+    </view>
+    <view style="height:100rpx"></view>
+</view>
+<view class="fixedNav flexstart">
+     <view class="item joincar flexbox" bindtap="action2" data-buy="joinCar">加入购物车</view>
+    <view class="item buyNow flexbox" bindtap="action2" data-buy="buyNow">立即购买</view>
+</view>
+<!--购物车的弹出页面-->
+<action-sheet hidden="{{actionSheetHidden2}}" class="action2">
+    <view class="top flexstart">
+       
+        <view class="text">
+            <view class="name hidecamp">{{goodsDetail.name}}</view>
+            <view class="storeNum">库存数量{{goodsDetail.kc}}</view>
+            <view class="price">￥{{goodsDetail.price}}</view>
+        </view>
+        <view class="close flexbox" bindtap="actionSheet2Change">×</view>
+    </view>
+    <view class="cal">
+        <view class="num">数量</view>
+        <view class="count flexstart">
+            <view class="red" bindtap="reduce">-</view>
+            <view class="buyNum">{{buyNum}}</view>
+            <view class="red" bindtap="add">+</view>
+        </view>
+    </view>
+    <view class="bottom">
+         <button class="join" wx:if="{{buyy=='joinCar'}}" hover-class="none" bindtap="joincar">加入购物车</button>
+         <button class="join" wx:if="{{buyy=='buyNow'}}" hover-class="none" bindtap="buynow">立即购买</button>
+    </view>
+
+</action-sheet>
